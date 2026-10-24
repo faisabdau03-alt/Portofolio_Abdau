@@ -235,11 +235,16 @@
       // Category filter
       const matchCategory = currentCategory === "all" || project.category === currentCategory;
 
-      // Status filter
-      const matchStatus =
-        currentStatus === "all" ||
-        (currentStatus === "live" && project.status === "live") ||
-        (currentStatus === "source" && project.status === "source");
+      // Status filter (Mendukung repositori privat secara aman)
+      let matchStatus = false;
+      if (currentStatus === "all") {
+        matchStatus = true;
+      } else if (currentStatus === "live") {
+        matchStatus = Boolean(project.demoUrl) && project.showDemo !== false;
+      } else if (currentStatus === "source") {
+        const isPriv = Boolean(project.isPrivate) || project.showSourceCode === false;
+        matchStatus = !isPriv && Boolean(project.repoUrl) && project.showSourceCode !== false;
+      }
 
       // Search filter
       const query = currentSearch.toLowerCase().trim();
@@ -308,23 +313,47 @@
 
     projectsGrid.innerHTML = filtered
       .map(p => {
-        const isLive = p.status === "live";
-        const statusBadgeClass = isLive ? "live" : "source";
-        const statusBadgeText = isLive ? "● LIVE DEMO" : "○ SOURCE CODE";
+        // Logika Keamanan Repositori Privat & Demo
+        const isPrivate = Boolean(p.isPrivate) || p.showSourceCode === false;
+        const canShowSource = !isPrivate && p.showSourceCode !== false && Boolean(p.repoUrl);
+        const canShowDemo = p.showDemo !== false && Boolean(p.demoUrl);
 
-        const demoBtnHtml = p.demoUrl
+        // Status badge di pojok kartu
+        let statusBadgeClass = "source";
+        let statusBadgeText = "○ PROJECT";
+
+        if (canShowDemo) {
+          statusBadgeClass = "live";
+          statusBadgeText = "● LIVE DEMO";
+        } else if (isPrivate) {
+          statusBadgeClass = "source";
+          statusBadgeText = "🔒 PRIVATE REPO";
+        } else if (canShowSource) {
+          statusBadgeClass = "source";
+          statusBadgeText = "○ SOURCE CODE";
+        }
+
+        // Tombol Demo (kiri)
+        const demoBtnHtml = canShowDemo
           ? `<a href="${p.demoUrl}" target="_blank" rel="noopener noreferrer" class="project-link-btn demo" data-sfx="coin">
               <span>▶ Live Demo</span>
              </a>`
-          : `<span class="project-link-btn code" style="opacity: 0.6; cursor: not-allowed;" title="Aplikasi Android Native (Jalankan via Android Studio)">
-              <span>🔒 App Native</span>
-             </span>`;
+          : (p.category === "mobile"
+              ? `<span class="project-link-btn disabled" title="Aplikasi Android Native (Dijalankan via Android Studio)">
+                  <span>📱 App Native</span>
+                 </span>`
+              : "");
 
-        const repoBtnHtml = p.repoUrl
+        // Tombol Source Code (kanan) - AMAN: Tidak merender tautan jika repositori privat
+        const repoBtnHtml = canShowSource
           ? `<a href="${p.repoUrl}" target="_blank" rel="noopener noreferrer" class="project-link-btn code" data-sfx="select">
               <span>🐙 Source Code</span>
              </a>`
-          : "";
+          : (isPrivate
+              ? `<span class="project-link-btn private-badge" title="Source code repositori ini bersifat privat (akses terbatas)">
+                  <span>🔒 Private Repo</span>
+                 </span>`
+              : "");
 
         const techChipsHtml = p.techStack
           ? p.techStack.map(t => `<span class="tech-chip">${t}</span>`).join("")

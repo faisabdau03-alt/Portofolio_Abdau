@@ -3,12 +3,20 @@
  * FAISAL ABDAU - PROJECTS DATA CONFIGURATION
  * ====================================================================
  * Berkas data terkurasi untuk portofolio Faisal Abdau (@faisabdau03-alt).
- * Seluruh data diverifikasi langsung dari repositori publik GitHub
- * dan deployment Vercel resmi.
  *
- * CARA MENAMBAH / MEMPERBARUI PROYEK:
- * Cukup tambahkan objek baru ke dalam array `PROJECTS_DATA` di bawah ini
- * mengikuti struktur yang sudah ada.
+ * 🔒 PANDUAN KEAMANAN & REPOSITORI PRIVAT:
+ * --------------------------------------------------------------------
+ * Anda dapat menampilkan proyek yang repositorinya bersifat PRIVAT di website:
+ *   - Atur `isPrivate: true`
+ *   - Atur `showSourceCode: false`
+ *   - Atur `repoUrl: null` (agar URL privat tidak terekspos di browser)
+ *
+ * Efek Keamanan di Website:
+ *   - Kartu proyek TETAP TAMPIL LENGKAP (Nama, Deskripsi, Fitur, Tech Stack).
+ *   - Tombol atau tautan menuju GitHub TIDAK DITAMPILKAN.
+ *   - Diganti dengan indikator non-link aman `🔒 Private Repo`.
+ *   - Pengunjung TIDAK BISA mengakses atau melihat link repositori privat tersebut.
+ *   - Tautan Live Demo (demoUrl) tetap berfungsi jika memang ada demo publik.
  */
 
 const PROJECTS_DATA = [
@@ -21,10 +29,13 @@ const PROJECTS_DATA = [
     status: "live",
     statusLabel: "Live Demo",
     featured: true,
+    isPrivate: false,
+    showSourceCode: true,
+    showDemo: true,
     repoUrl: "https://github.com/faisabdau03-alt/atur-produksi",
     demoUrl: "https://jaya-wijaya.vercel.app",
     bannerIcon: "⚙️",
-    accentColor: "#8b5cf6", // Electric Purple
+    accentColor: "#3157D5",
     description:
       "Aplikasi web single-page (SPA) untuk mengelola seluruh rantai operasional manufaktur secara terintegrasi: kontrol stok barang masuk/keluar, pencatatan arus kas keuangan, serta otomasi penggajian karyawan.",
     problemSolved:
@@ -59,10 +70,13 @@ const PROJECTS_DATA = [
     status: "live",
     statusLabel: "Live Demo",
     featured: true,
+    isPrivate: false,
+    showSourceCode: true,
+    showDemo: true,
     repoUrl: "https://github.com/faisabdau03-alt/Mulyo-1.0",
     demoUrl: "https://mulyoadv.vercel.app",
     bannerIcon: "🏕️",
-    accentColor: "#10b981", // Emerald Green
+    accentColor: "#059669",
     description:
       "Platform persewaan perlengkapan camping dan mendaki gunung modern (tenda, carrier, sleeping bag, alat masak). Dilengkapi booking picker interaktif, kalkulator sewa otomatis, dan alur checkout WhatsApp.",
     problemSolved:
@@ -95,10 +109,13 @@ const PROJECTS_DATA = [
     status: "live",
     statusLabel: "Live Demo",
     featured: true,
+    isPrivate: false,
+    showSourceCode: true,
+    showDemo: true,
     repoUrl: "https://github.com/faisabdau03-alt/PT-ASM-Putra",
     demoUrl: "https://asm-seven-iota.vercel.app",
     bannerIcon: "🚌",
-    accentColor: "#06b6d4", // Electric Cyan
+    accentColor: "#3157D5",
     description:
       "Website resmi pemesanan dan company profile armada bus pariwisata untuk PO Alula Sadida Maryam. Menyajikan estimasi harga rute perjalanan real-time, spesifikasi unit bus, dan konsultasi WhatsApp.",
     problemSolved:
@@ -129,6 +146,9 @@ const PROJECTS_DATA = [
     status: "live",
     statusLabel: "Live Demo",
     featured: false,
+    isPrivate: false,
+    showSourceCode: true,
+    showDemo: true,
     repoUrl: "https://github.com/faisabdau03-alt/dasboard-pendakian",
     demoUrl: "https://dasboard-pendakian.vercel.app",
     bannerIcon: "⛰️",
@@ -156,6 +176,9 @@ const PROJECTS_DATA = [
     status: "live",
     statusLabel: "Live Demo",
     featured: false,
+    isPrivate: false,
+    showSourceCode: true,
+    showDemo: true,
     repoUrl: "https://github.com/faisabdau03-alt/Arza",
     demoUrl: "https://arza-sage.vercel.app",
     bannerIcon: "🎓",
@@ -183,6 +206,9 @@ const PROJECTS_DATA = [
     status: "source",
     statusLabel: "Source Code Only",
     featured: false,
+    isPrivate: false,
+    showSourceCode: true,
+    showDemo: false, // Aplikasi Android native tanpa live web demo
     repoUrl: "https://github.com/faisabdau03-alt/Fokusku",
     demoUrl: null,
     bannerIcon: "⏱️",
@@ -208,9 +234,15 @@ const PROJECTS_DATA = [
     category: "mobile",
     categoryLabel: "Mobile App (Android)",
     status: "source",
-    statusLabel: "Source Code Only",
+    statusLabel: "Private Project",
     featured: false,
-    repoUrl: "https://github.com/faisabdau03-alt/BelajarFireB",
+    // 🔒 CONTOH REPOSITORI PRIVAT:
+    // isPrivate & showSourceCode: false memastikan kartu tetap tampil lengkap,
+    // namun tombol dan URL repositori privat TIDAK DITAMPILKAN di website.
+    isPrivate: true,
+    showSourceCode: false,
+    showDemo: false,
+    repoUrl: null, // Dikunci null agar tidak ada URL yang terekspos
     demoUrl: null,
     bannerIcon: "🔥",
     accentColor: "#ef4444",
@@ -236,10 +268,13 @@ const PROJECTS_DATA = [
     status: "live",
     statusLabel: "Live Demo",
     featured: false,
+    isPrivate: false,
+    showSourceCode: true,
+    showDemo: true,
     repoUrl: "https://github.com/faisabdau03-alt/Abdauuu_Porto",
     demoUrl: "https://abdauuuporto.vercel.app",
     bannerIcon: "👾",
-    accentColor: "#a855f7",
+    accentColor: "#3157D5",
     description:
       "Versi perdana portofolio personal Faisal Abdau yang mengusung tema arcade 16-bit klasik, efek suara Web Audio API, CRT overlay, dan Konami Code easter egg.",
     problemSolved:

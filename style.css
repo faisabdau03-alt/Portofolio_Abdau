@@ -1416,6 +1416,23 @@ body.crt-enabled .crt-overlay {
   color: var(--color-accent);
 }
 
+.project-link-btn.disabled,
+.project-link-btn.private-badge {
+  background: var(--color-bg-secondary);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  opacity: 0.8;
+  cursor: default;
+}
+
+.project-link-btn.disabled:hover,
+.project-link-btn.private-badge:hover {
+  border-color: var(--color-border);
+  color: var(--color-text-muted);
+  transform: none;
+  box-shadow: none;
+}
+
 /* Empty State */
 .empty-state {
   grid-column: 1 / -1;
