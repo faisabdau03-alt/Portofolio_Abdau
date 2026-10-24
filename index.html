@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>FAISAL ABDAU | Junior Web Developer & IT Student</title>
+  <meta name="description" content="Portofolio resmi Faisal Abdau (@faisabdau03-alt) — Mahasiswa IT Semester 5 & Junior Web Developer. Menampilkan proyek nyata seperti Atur Produksi, Mulyo Adventure, PO Bus ASM Putra, dan aplikasi mobile.">
+  <meta name="author" content="Faisal Abdau">
+  <meta name="keywords" content="Faisal Abdau, Web Developer, Frontend Developer, Portofolio Developer, Supabase, Vite, Bootstrap, Tailwind, Tecnopreneur">
+
+  <!-- Open Graph Meta Tags (Optimized for Instagram Bio & Social Share) -->
+  <meta property="og:title" content="FAISAL ABDAU | Web Developer Portfolio">
+  <meta property="og:description" content="Karya nyata dan aplikasi web oleh Faisal Abdau. Jelajahi proyek live demo dan source code di GitHub.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://abdauuuporto.vercel.app">
+  <meta name="theme-color" content="#070a12">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Fonts: Google Fonts (Plus Jakarta Sans for Crisp Readability + Press Start 2P & VT323 for Retro Accents) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Retro Scanlines CRT Overlay (Toggled via HUD Button) -->
+  <div id="crtOverlay" class="crt-overlay" aria-hidden="true"></div>
+
+  <!-- ====================================================================
+       TOP ARCADE HUD NAVBAR
+       ==================================================================== -->
+  <header class="arcade-hud" role="banner">
+    <div class="hud-inner">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="hud-brand" title="Faisal Abdau - Beranda" data-sfx="blip">
+        <span class="brand-badge">DEV</span>
+        <span class="brand-text">FAISAL<span class="brand-dot">.</span>DEV</span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="hud-nav" aria-label="Navigasi Utama">
+        <a href="#hero" class="hud-nav-link active" data-sfx="blip">Home</a>
+        <a href="#about" class="hud-nav-link" data-sfx="blip">About</a>
+        <a href="#skills" class="hud-nav-link" data-sfx="blip">Skills</a>
+        <a href="#featured" class="hud-nav-link" data-sfx="blip">Featured</a>
+        <a href="#projects" class="hud-nav-link" data-sfx="blip">Projects</a>
+        <a href="#ps-zone" class="hud-nav-link" data-sfx="blip">PS Zone</a>
+        <a href="#contact" class="hud-nav-link" data-sfx="blip">Contact</a>
+      </nav>
+
+      <!-- HUD Actions: Coins, SFX, CRT, Hamburger -->
+      <div class="hud-actions">
+        <!-- Coin Counter & Score Clicker -->
+        <div class="hud-stats-pill" id="coinBtn" title="Klik untuk insert coin! (+100 Score)">
+          <span>🪙</span>
+          <span id="coinCount">x99</span>
+          <span style="opacity: 0.4;">|</span>
+          <span id="scoreVal">082026</span>
+        </div>
+
+        <!-- SFX Toggle -->
+        <button type="button" class="hud-tool-btn" id="sfxToggle" title="Matikan/Hidupkan Efek Suara Web Audio API" aria-label="Toggle Sound FX">
+          <span id="sfxIcon">🔊</span>
+        </button>
+
+        <!-- CRT Scanline Toggle -->
+        <button type="button" class="hud-tool-btn" id="crtToggle" title="Aktifkan/Matikan Filter Retro Scanline CRT" aria-label="Toggle CRT Effect">
+          <span id="crtIcon">📺</span>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Buka Menu Mobile">
+          ☰
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navigasi Mobile">
+      <a href="#hero" class="mobile-nav-link active" data-sfx="blip">Home</a>
+      <a href="#about" class="mobile-nav-link" data-sfx="blip">About Me</a>
+      <a href="#skills" class="mobile-nav-link" data-sfx="blip">Skills & Stack</a>
+      <a href="#featured" class="mobile-nav-link" data-sfx="blip">Featured Projects</a>
+      <a href="#projects" class="mobile-nav-link" data-sfx="blip">All Projects</a>
+      <a href="#ps-zone" class="mobile-nav-link" data-sfx="blip">PlayStation Zone</a>
+      <a href="#contact" class="mobile-nav-link" data-sfx="blip">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ====================================================================
+       MAIN CONTENT WRAPPER
+       ==================================================================== -->
+  <main class="main-wrapper">
+
+    <!-- ==================================================================
+         HERO SECTION
+         ================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="hero-grid">
+        
+        <!-- Left Column: Introduction & CTA -->
+        <div class="hero-text-col">
+          <div class="hero-status-pill">
+            <span class="pulse-dot"></span>
+            <span>TERSEDIA UNTUK PROYEK & KOLABORASI</span>
+          </div>
+
+          <p class="hero-greeting">▶ STAGE 01 : WELCOME VISITOR</p>
+          <h1 class="hero-name">Faisal Abdau</h1>
+          
+          <div class="hero-role">
+            <span>Mahasiswa IT & Junior Web Developer</span>
+            <span class="hero-role-badge">SEMESTER 5</span>
+          </div>
+
+          <p class="hero-bio">
+            Fokus membangun aplikasi web modern, sistem manajemen operasional, dan antarmuka responsif yang bersih dan fungsional. Terbiasa memecahkan masalah nyata melalui kode berbasis <strong>JavaScript</strong>, <strong>HTML5/CSS3</strong>, integrasi backend cloud <strong>Supabase</strong>, dan ekosistem mobile Android.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary" data-sfx="coin">
+              <span>▶ Explore My Projects</span>
+            </a>
+            <a href="https://github.com/faisabdau03-alt" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-sfx="select">
+              <span>🐙 Visit My GitHub</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary" data-sfx="blip">
+              <span>✉ Hubungi Saya</span>
+            </a>
+          </div>
+
+          <!-- Quick Stats Row (Based on Real Verified Data) -->
+          <div class="hero-quick-stats">
+            <div class="stat-item">
+              <span class="stat-num">8</span>
+              <span class="stat-label">Repositori Publik</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">6</span>
+              <span class="stat-label">Live Deployments</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Karya Nyata</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">SEM. 5</span>
+              <span class="stat-label">Teknik Informatika</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Terminal Widget -->
+        <div class="hero-visual-col">
+          <div class="hero-widget-card">
+            
+            <div class="widget-header">
+              <div class="widget-dots">
+                <span class="w-dot red"></span>
+                <span class="w-dot yellow"></span>
+                <span class="w-dot green"></span>
+              </div>
+              <span class="widget-title">FAISAL_TERMINAL_V2.SH</span>
+              <span style="font-family: var(--font-retro); font-size: 0.55rem; color: var(--accent-emerald);">● READY</span>
+            </div>
+
+            <!-- Terminal Tabs -->
+            <div class="widget-tabs">
+              <div class="widget-tab active" data-tab="profile">faisal.json</div>
+              <div class="widget-tab" data-tab="skills">skills.ts</div>
+              <div class="widget-tab" data-tab="journey">journey.md</div>
+            </div>
+
+            <!-- Terminal Code Display -->
+            <div class="widget-body" id="terminalCodeBody">
+              <div class="code-line"><span class="code-keyword">const</span> developer = {</div>
+              <div class="code-line">&nbsp;&nbsp;<span class="code-prop">name</span>: <span class="code-str">"Faisal Abdau"</span>,</div>
+              <div class="code-line">&nbsp;&nbsp;<span class="code-prop">role</span>: <span class="code-str">"Junior Web Developer & IT Student"</span>,</div>
+              <div class="code-line">&nbsp;&nbsp;<span class="code-prop">semester</span>: <span class="code-num">5</span>,</div>
+              <div class="code-line">&nbsp;&nbsp;<span class="code-prop">verifiedProjects</span>: <span class="code-num">8</span>,</div>
+              <div class="code-line">&nbsp;&nbsp;<span class="code-prop">liveDeployments</span>: <span class="code-num">6</span>,</div>
+              <div class="code-line">&nbsp;&nbsp;<span class="code-prop">favoriteLeisure</span>: <span class="code-str">"PlayStation Gaming & Tech Exploration"</span>,</div>
+              <div class="code-line">&nbsp;&nbsp;<span class="code-prop">motto</span>: <span class="code-str">"Code with precision, learn continuously."</span></div>
+              <div class="code-line">};</div>
+            </div>
+
+            <div class="widget-footer">
+              <div class="widget-footer-info">
+                <span>⚡ UTF-8</span>
+                <span>•</span>
+                <span>Node.js / Browser Runtime</span>
+              </div>
+              <button type="button" class="widget-interactive-btn" id="terminalRunBtn" title="Jalankan kode simulasi">
+                ▶ RUN CODE
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         ABOUT ME SECTION
+         ================================================================== -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <span class="section-tag">★ CHARACTER LORE & PROFILE ★</span>
+        <h2 class="section-title">Membangun Solusi Digital dengan <span class="gradient-text">Rasa Ingin Tahu Tinggi</span></h2>
+        <p class="section-desc">
+          Perjalanan saya dalam rekayasa perangkat lunak berakar dari keinginan menyelesaikan permasalahan nyata sehari-hari dan kecintaan pada dunia teknologi.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Narrative Card -->
+        <article class="about-card">
+          <div class="about-narrative">
+            <p>
+              Halo! Saya <strong>Faisal Abdau</strong>, mahasiswa aktif Semester 5 Program Studi Informatika yang sedang mendalami mata kuliah <strong>Tecnopreneur</strong> dan <strong>Mobile Programming</strong>.
+            </p>
+            <p>
+              Saya senang membangun aplikasi yang benar-benar digunakan untuk kebutuhan operasional — mulai dari <strong>sistem inventaris dan penggajian UMKM</strong> (Atur Produksi), <strong>portal rental perlengkapan outdoor</strong> (Mulyo Adventure), hingga <strong>platform reservasi transportasi bus pariwisata</strong> (PO ASM Putra).
+            </p>
+            <p>
+              Prinsip belajar saya sederhana: <em>"Learn by doing, verify through deployment."</em> Saya percaya bahwa kode yang hebat adalah kode yang dapat diakses, bermanfaat bagi pengguna, serta dirancang dengan struktur yang rapi dan terukur.
+            </p>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="#contact" class="btn btn-secondary btn-sm" data-sfx="coin">
+              <span>💬 Ajak Diskusi / Kolaborasi</span>
+            </a>
+            <a href="https://github.com/faisabdau03-alt" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" data-sfx="select">
+              <span>🐙 GitHub Profile</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Pillars Card -->
+        <div class="about-pillars">
+          <div class="pillar-item">
+            <div class="pillar-icon">🎯</div>
+            <div>
+              <h3 class="pillar-title">Problem-Solving Oriented</h3>
+              <p class="pillar-desc">
+                Setiap baris kode dibuat untuk menjawab kebutuhan spesifik: validasi stok minus, kalkulasi sewa tanggal otomatis, hingga format checkout WhatsApp siap kirim.
+              </p>
+            </div>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon">⚡</div>
+            <div>
+              <h3 class="pillar-title">Modern & Responsive Workflow</h3>
+              <p class="pillar-desc">
+                Mengutamakan tata letak fleksibel, performa cepat tanpa bloat, serta pengalaman pengguna yang nyaman diakses dari layar smartphone maupun monitor desktop.
+              </p>
+            </div>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon">🎮</div>
+            <div>
+              <h3 class="pillar-title">PlayStation Gamer Mindset</h3>
+              <p class="pillar-desc">
+                Waktu luang di konsol PlayStation melatih fokus tinggi, ketangkasan refleks, dan keuletan saat melakukan debugging persoalan kode yang kompleks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         SKILLS & TECHNOLOGIES
+         ================================================================== -->
+    <section id="skills" class="section">
+      <div class="section-header">
+        <span class="section-tag">★ SKILL TREE & ATTRIBUTES ★</span>
+        <h2 class="section-title">Teknologi yang Terbukti dalam <span class="gradient-text">Proyek Nyata</span></h2>
+        <p class="section-desc">
+          Daftar keahlian teknis yang telah diimplementasikan langsung pada repositori GitHub dan aplikasi web yang telah dipublikasikan.
+        </p>
+      </div>
+
+      <div class="skills-categories-grid">
+        
+        <!-- Category 1: Languages -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">💻</span>
+            <h3 class="skill-cat-title">Programming Languages</h3>
+          </div>
+          <div class="skill-tags-list">
+            <span class="skill-pill">JavaScript (ES6+)</span>
+            <span class="skill-pill">HTML5 Semantic</span>
+            <span class="skill-pill">CSS3 Modern</span>
+            <span class="skill-pill">Java (Android)</span>
+            <span class="skill-pill">SQL (PostgreSQL)</span>
+          </div>
+          <div class="skill-proof-note">
+            <span>✔</span> Terverifikasi di 8 repositori publik
+          </div>
+        </div>
+
+        <!-- Category 2: Frontend Development -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🎨</span>
+            <h3 class="skill-cat-title">Frontend Development</h3>
+          </div>
+          <div class="skill-tags-list">
+            <span class="skill-pill">Vite (Build Tool)</span>
+            <span class="skill-pill">Tailwind CSS</span>
+            <span class="skill-pill">Bootstrap 5.3</span>
+            <span class="skill-pill">CSS Flexbox & Grid</span>
+            <span class="skill-pill">Single Page App (SPA)</span>
+            <span class="skill-pill">Responsive Design</span>
+          </div>
+          <div class="skill-proof-note">
+            <span>✔</span> Terverifikasi di Atur Produksi, Mulyo, & ASM Putra
+          </div>
+        </div>
+
+        <!-- Category 3: Backend & BaaS -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">☁️</span>
+            <h3 class="skill-cat-title">Backend & Cloud BaaS</h3>
+          </div>
+          <div class="skill-tags-list">
+            <span class="skill-pill">Supabase Backend</span>
+            <span class="skill-pill">Supabase Realtime</span>
+            <span class="skill-pill">Row Level Security (RLS)</span>
+            <span class="skill-pill">REST API Integration</span>
+            <span class="skill-pill">Node.js & npm</span>
+          </div>
+          <div class="skill-proof-note">
+            <span>✔</span> Terverifikasi di arsitektur Atur Produksi
+          </div>
+        </div>
+
+        <!-- Category 4: Database & Storage -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🗄️</span>
+            <h3 class="skill-cat-title">Database & Storage</h3>
+          </div>
+          <div class="skill-tags-list">
+            <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">LocalStorage API</span>
+            <span class="skill-pill">Firebase Realtime DB</span>
+            <span class="skill-pill">Firebase Auth</span>
+          </div>
+          <div class="skill-proof-note">
+            <span>✔</span> Terverifikasi di Mulyo-1.0 & BelajarFireB
+          </div>
+        </div>
+
+        <!-- Category 5: Tools & Deployment -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🛠️</span>
+            <h3 class="skill-cat-title">Tools & Platforms</h3>
+          </div>
+          <div class="skill-tags-list">
+            <span class="skill-pill">Visual Studio Code</span>
+            <span class="skill-pill">Git & GitHub</span>
+            <span class="skill-pill">Vercel Deployment</span>
+            <span class="skill-pill">Android Studio & Gradle</span>
+            <span class="skill-pill">GitHub Pages</span>
+          </div>
+          <div class="skill-proof-note">
+            <span>✔</span> 6 website aktif dipublikasikan di Vercel
+          </div>
+        </div>
+
+        <!-- Category 6: Interactive APIs & Audio -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🔊</span>
+            <h3 class="skill-cat-title">Web APIs & Hardware</h3>
+          </div>
+          <div class="skill-tags-list">
+            <span class="skill-pill">Web Audio API (Synthesizer)</span>
+            <span class="skill-pill">WhatsApp Deep Link API</span>
+            <span class="skill-pill">Google Maps Embed API</span>
+            <span class="skill-pill">Material 3 Guidelines</span>
+            <span class="skill-pill">Eksplorasi IoT / Arduino</span>
+          </div>
+          <div class="skill-proof-note">
+            <span>✔</span> Sound synthesizer & integrasi deep link
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         FEATURED PROJECTS (Deep Dive Spotlight)
+         ================================================================== -->
+    <section id="featured" class="section">
+      <div class="section-header">
+        <span class="section-tag">★ SPOTLIGHT QUESTS : PROYEK UTAMA ★</span>
+        <h2 class="section-title">Karya Pilihan dengan <span class="gradient-text">Implementasi Nyata</span></h2>
+        <p class="section-desc">
+          Tiga proyek teratas yang menunjukkan kemampuan integrasi sistem lengkap: dari arsitektur data, logika bisnis, hingga pengalaman pengguna interaktif.
+        </p>
+      </div>
+
+      <div class="featured-grid">
+
+        <!-- SPOTLIGHT 1: Atur Produksi -->
+        <article class="featured-card">
+          <div class="featured-card-body">
+            <div class="featured-badges">
+              <span class="badge-featured">⭐ FEATURED SYSTEM</span>
+              <span class="badge-status live">🟢 LIVE DEMO READY</span>
+              <span class="tech-chip">Vite + Supabase</span>
+            </div>
+
+            <h3 class="featured-title">Atur Produksi (Jaya Wijaya)</h3>
+            <span class="featured-subtitle">Sistem Manajemen Operasional, Persediaan & Payroll Manufaktur</span>
+
+            <p class="featured-description">
+              Aplikasi single-page application (SPA) yang dirancang untuk mengelola seluruh rantai operasional produksi skala manufaktur dan bengkel kerja. Mengotomatisasi pelacakan stok bahan masuk-keluar, pencatatan mutasi kas, serta kalkulasi penggajian karyawan.
+            </p>
+
+            <div class="deep-dive-box">
+              <span class="deep-dive-title">💡 MASALAH & SOLUSI YANG DIBUAT:</span>
+              <p class="deep-dive-text">
+                Pencatatan manual sering memicu stok bahan baku minus dan ketidakcocokan upah insentif karyawan per unit. Aplikasi ini menyediakan validasi stok otomatis, sinkronisasi realtime multi-perangkat via Supabase, dan ekspor laporan bulanan ke format CSV.
+              </p>
+            </div>
+
+            <ul class="featured-features-list">
+              <li>Pencatatan persediaan bahan masuk & keluar dengan sistem proteksi stok minus</li>
+              <li>Pencatatan mutasi kas operasional per kategori dan tanggal transaksi</li>
+              <li>Manajemen karyawan dengan formula gaji pokok + insentif kuantitas produksi</li>
+              <li>Row Level Security (RLS) Supabase untuk pembatasan hak akses data sensitif</li>
+              <li>Sinkronisasi data langsung antar-perangkat via Supabase Realtime</li>
+            </ul>
+
+            <div class="featured-tech-row">
+              <span class="tech-chip">Vite</span>
+              <span class="tech-chip">JavaScript (ES6+)</span>
+              <span class="tech-chip">Supabase</span>
+              <span class="tech-chip">PostgreSQL</span>
+              <span class="tech-chip">Realtime API</span>
+              <span class="tech-chip">RLS</span>
+              <span class="tech-chip">CSS3</span>
+            </div>
+
+            <div class="featured-actions">
+              <a href="https://jaya-wijaya.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-cyan btn-sm" data-sfx="coin">
+                <span>▶ Buka Live Demo</span>
+              </a>
+              <a href="https://github.com/faisabdau03-alt/atur-produksi" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" data-sfx="select">
+                <span>🐙 Source Code GitHub</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="featured-card-visual">
+            <div class="visual-cartridge">
+              <span class="visual-scan-badge">REALTIME 200 OK</span>
+              <div class="visual-big-icon">⚙️</div>
+              <div class="visual-title-tag">ATUR PRODUKSI</div>
+              <div class="visual-repo-name">repo: atur-produksi</div>
+              <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.85rem;">
+                Deployed on Vercel: jaya-wijaya.vercel.app
+              </p>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- SPOTLIGHT 2: Mulyo Adventure 1.0 -->
+        <article class="featured-card">
+          <div class="featured-card-body">
+            <div class="featured-badges">
+              <span class="badge-featured">⭐ FEATURED PLATFORM</span>
+              <span class="badge-status live">🟢 LIVE DEMO READY</span>
+              <span class="tech-chip">Bootstrap 5.3 + LocalStorage</span>
+            </div>
+
+            <h3 class="featured-title">Mulyo Adventure 1.0</h3>
+            <span class="featured-subtitle">Platform Persewaan Perlengkapan Camping & Outdoor Adventure</span>
+
+            <p class="featured-description">
+              Platform persewaan perlengkapan camping dan mendaki gunung modern. Mengadaptasi konsep rental profesional dengan fitur pemilih tanggal dan durasi sewa interaktif, modal kalkulator harga instan, dan alur checkout WhatsApp terotomatisasi.
+            </p>
+
+            <div class="deep-dive-box">
+              <span class="deep-dive-title">💡 MASALAH & SOLUSI YANG DIBUAT:</span>
+              <p class="deep-dive-text">
+                Penyewa sering kebingungan menghitung total sewa untuk variasi jumlah hari dan barang. Sistem ini secara otomatis mengkalkulasi tanggal pengembalian (H+1) dan subtotal sewa secara instan serta menyimpan keranjang pesanan secara persisten di LocalStorage.
+              </p>
+            </div>
+
+            <ul class="featured-features-list">
+              <li>Interactive Booking Picker: pemilih tanggal sewa & batas pengembalian real-time</li>
+              <li>Katalog alat dengan live search, filter kategori, brand ternama, dan range slider harga</li>
+              <li>Modal detail produk dengan kalkulator sewa instan (Harga/hari × Jumlah × Durasi)</li>
+              <li>Keranjang belanja (Cart Drawer) interaktif persisten berbasis LocalStorage API</li>
+              <li>Generator konfirmasi pemesanan rapi langsung ke nomor WhatsApp admin toko</li>
+            </ul>
+
+            <div class="featured-tech-row">
+              <span class="tech-chip">HTML5 Semantic</span>
+              <span class="tech-chip">CSS3 Modern</span>
+              <span class="tech-chip">Bootstrap 5.3</span>
+              <span class="tech-chip">JavaScript ES6+</span>
+              <span class="tech-chip">LocalStorage</span>
+              <span class="tech-chip">WhatsApp API</span>
+            </div>
+
+            <div class="featured-actions">
+              <a href="https://mulyoadv.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-cyan btn-sm" data-sfx="coin">
+                <span>▶ Buka Live Demo</span>
+              </a>
+              <a href="https://github.com/faisabdau03-alt/Mulyo-1.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" data-sfx="select">
+                <span>🐙 Source Code GitHub</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="featured-card-visual">
+            <div class="visual-cartridge">
+              <span class="visual-scan-badge">CATALOG READY</span>
+              <div class="visual-big-icon">🏕️</div>
+              <div class="visual-title-tag">MULYO ADVENTURE</div>
+              <div class="visual-repo-name">repo: Mulyo-1.0</div>
+              <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.85rem;">
+                Deployed on Vercel: mulyoadv.vercel.app
+              </p>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- SPOTLIGHT 3: Web PO Bus ASM Putra -->
+        <article class="featured-card">
+          <div class="featured-card-body">
+            <div class="featured-badges">
+              <span class="badge-featured">⭐ FEATURED PORTAL</span>
+              <span class="badge-status live">🟢 LIVE DEMO READY</span>
+              <span class="tech-chip">Booking System</span>
+            </div>
+
+            <h3 class="featured-title">Web PO Bus ASM Putra (Alula Sadida Maryam)</h3>
+            <span class="featured-subtitle">Website Profil & Reservasi Armada Bus Pariwisata Modern</span>
+
+            <p class="featured-description">
+              Website profil dan pemesanan armada bus pariwisata modern untuk PO Alula Sadida Maryam. Menyajikan estimasi harga rute perjalanan real-time, spesifikasi lengkap unit bus, galeri armada, dan konsultasi cepat melalui WhatsApp.
+            </p>
+
+            <div class="deep-dive-box">
+              <span class="deep-dive-title">💡 MASALAH & SOLUSI YANG DIBUAT:</span>
+              <p class="deep-dive-text">
+                Kebutuhan transparansi informasi armada pariwisata dan estimasi biaya rute perjalanan secara mandiri sebelum menghubungi customer service.
+              </p>
+            </div>
+
+            <ul class="featured-features-list">
+              <li>Kalkulator estimasi biaya sewa rute pariwisata secara real-time</li>
+              <li>Showcase armada lengkap dengan spesifikasi teknis dan fasilitas kabin</li>
+              <li>Galeri foto armada bus beresolusi tinggi</li>
+              <li>Integrasi deep link pemesanan langsung ke kontak admin WhatsApp</li>
+            </ul>
+
+            <div class="featured-tech-row">
+              <span class="tech-chip">HTML5</span>
+              <span class="tech-chip">CSS3</span>
+              <span class="tech-chip">JavaScript</span>
+              <span class="tech-chip">Responsive Layout</span>
+              <span class="tech-chip">WhatsApp Integration</span>
+            </div>
+
+            <div class="featured-actions">
+              <a href="https://asm-seven-iota.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-cyan btn-sm" data-sfx="coin">
+                <span>▶ Buka Live Demo</span>
+              </a>
+              <a href="https://github.com/faisabdau03-alt/PT-ASM-Putra" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" data-sfx="select">
+                <span>🐙 Source Code GitHub</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="featured-card-visual">
+            <div class="visual-cartridge">
+              <span class="visual-scan-badge">FLEET SYSTEM</span>
+              <div class="visual-big-icon">🚌</div>
+              <div class="visual-title-tag">ASM TRANS</div>
+              <div class="visual-repo-name">repo: PT-ASM-Putra</div>
+              <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.85rem;">
+                Deployed on Vercel: asm-seven-iota.vercel.app
+              </p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         ALL PROJECTS SHOWCASE (Search, Filter, Sort)
+         ================================================================== -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <span class="section-tag">★ ALL REPOSITORIES & EXPLORATIONS ★</span>
+        <h2 class="section-title">Koleksi Lengkap Seluruh <span class="gradient-text">Proyek Nyata</span></h2>
+        <p class="section-desc">
+          Telusuri seluruh repositori GitHub dan aplikasi web saya menggunakan fitur pencarian instan, filter kategori, maupun status live demo.
+        </p>
+      </div>
+
+      <!-- Filter & Search Toolbar -->
+      <div class="projects-filter-bar">
+        
+        <!-- Top Row: Search & Sort -->
+        <div class="filter-top-row">
+          <div class="search-input-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="projectSearchInput" placeholder="Cari nama proyek, teknologi, atau deskripsi..." aria-label="Cari Proyek">
+            <button type="button" class="clear-search-btn" id="clearSearchBtn" aria-label="Hapus Pencarian">✕</button>
+          </div>
+
+          <div class="sort-select-wrap">
+            <label for="projectSortSelect" class="sort-label">Urutkan:</label>
+            <select id="projectSortSelect" class="sort-select">
+              <option value="default">Default (Featured Pertama)</option>
+              <option value="name-asc">Nama Proyek (A - Z)</option>
+              <option value="name-desc">Nama Proyek (Z - A)</option>
+            </select>
+          </div>
+
+          <div class="hud-stats-pill" style="margin-left: auto;">
+            <span id="projectCountBadge">8 Proyek</span>
+          </div>
+        </div>
+
+        <!-- Middle Row: Category Filter Buttons -->
+        <div class="filter-pills-row">
+          <button type="button" class="filter-btn active" data-category="all">
+            <span>Semua Kategori</span>
+          </button>
+          <button type="button" class="filter-btn" data-category="webapp">
+            <span>⚙️ Web App</span>
+          </button>
+          <button type="button" class="filter-btn" data-category="ecommerce">
+            <span>🏕️ E-Commerce / Rental</span>
+          </button>
+          <button type="button" class="filter-btn" data-category="booking">
+            <span>🚌 Booking & Profile</span>
+          </button>
+          <button type="button" class="filter-btn" data-category="landing">
+            <span>⛰️ Landing Page</span>
+          </button>
+          <button type="button" class="filter-btn" data-category="creative">
+            <span>🎓 Creative UI</span>
+          </button>
+          <button type="button" class="filter-btn" data-category="mobile">
+            <span>📱 Mobile App (Android)</span>
+          </button>
+        </div>
+
+        <!-- Bottom Row: Status Filter -->
+        <div class="filter-status-row">
+          <span>Filter Status:</span>
+          <button type="button" class="status-toggle-btn active" data-status="all">Semua Status</button>
+          <button type="button" class="status-toggle-btn" data-status="live">🟢 Live Demo Only</button>
+          <button type="button" class="status-toggle-btn" data-status="source">💾 Source Code Only</button>
+        </div>
+
+      </div>
+
+      <!-- Projects Cards Grid (Rendered dynamically by script.js & projects-data.js) -->
+      <div class="projects-cards-grid" id="projectsGrid">
+        <!-- Dynamic Cards Injected Here -->
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         HOBBY: PLAYSTATION ZONE (Retro 16-Bit Corner)
+         ================================================================== -->
+    <section id="ps-zone" class="section">
+      <div class="section-header">
+        <span class="section-tag">★ BONUS STAGE : PLAYSTATION ZONE ★</span>
+        <h2 class="section-title">PlayStation & <span class="gradient-text">Developer Mindset</span></h2>
+        <p class="section-desc">
+          Bagi saya, bermain video game bukan sekadar rekreasi, melainkan ruang mengasah fokus, strategi, ketelitian, dan daya tahan saat menghadapi tantangan kompleks.
+        </p>
+      </div>
+
+      <div class="ps-zone-container">
+        <div class="ps-zone-grid">
+          
+          <!-- Left: 16-Bit Console & Interactive DualShock Controller -->
+          <div class="ps-chassis">
+            <div class="ps-disc-lid">
+              <span class="ps-logo-disc">PS</span>
+            </div>
+
+            <div class="ps-ports-row">
+              <span class="ps-port-slot">MEMORY CARD [8MB OK]</span>
+              <span class="ps-port-slot">CONTROLLER 1 [CONNECTED]</span>
+            </div>
+
+            <div class="ps-controller-pad">
+              <p class="pad-label">KLIK TOMBOL CONTROLLER UNTUK SOUND COMBO:</p>
+              
+              <div class="ps-buttons-deck">
+                <button type="button" class="ps-action-btn btn-tri" data-combo="TRI" title="Triangle Skill" aria-label="Tombol Segitiga">▲</button>
+                <button type="button" class="ps-action-btn btn-cir" data-combo="CIR" title="Circle Skill" aria-label="Tombol Lingkaran">●</button>
+                <button type="button" class="ps-action-btn btn-cro" data-combo="CRO" title="Cross Skill" aria-label="Tombol Silang">✖</button>
+                <button type="button" class="ps-action-btn btn-squ" data-combo="SQU" title="Square Skill" aria-label="Tombol Kotak">■</button>
+              </div>
+
+              <div id="comboDisplayText" class="combo-display-text">PRESS ANY BUTTON TO CAST SKILL!</div>
+            </div>
+          </div>
+
+          <!-- Right: Lore, Trophies & Soundboard -->
+          <div class="ps-info-content">
+            <h3 class="ps-content-title">"Gaming mengajarkan bahwa game over hanyalah kesempatan untuk mencoba strategi baru."</h3>
+            
+            <p class="ps-content-desc">
+              Ketika tidak sedang mengetik kode HTML, CSS, JavaScript, atau merancang skema database Supabase, saya mengisi waktu luang dengan bermain PlayStation. Kebiasaan ini membantu menjaga kejernihan berpikir dan melatih ketenangan saat memecahkan bug.
+            </p>
+
+            <!-- Trophies -->
+            <div class="trophy-grid">
+              <div class="trophy-card">
+                <div class="t-icon">🏆</div>
+                <div class="t-name">Platinum Focus</div>
+                <div class="t-desc">Konsentrasi tinggi dan presisi saat debugging kode rumit</div>
+              </div>
+
+              <div class="trophy-card">
+                <div class="t-icon">🥇</div>
+                <div class="t-name">Fast Reflexes</div>
+                <div class="t-desc">Cepat beradaptasi dan mempelajari teknologi baru</div>
+              </div>
+
+              <div class="trophy-card">
+                <div class="t-icon">🎯</div>
+                <div class="t-name">High Replay Value</div>
+                <div class="t-desc">Senang melakukan iterasi dan refactor demi kualitas terbaik</div>
+              </div>
+            </div>
+
+            <!-- Sound Test Board (Web Audio API Synthesizer) -->
+            <div class="sound-test-bar">
+              <span class="sound-test-label">SYNTH SOUND TEST:</span>
+              <button type="button" class="sfx-pill-btn" data-sound="coin">🪙 COIN</button>
+              <button type="button" class="sfx-pill-btn" data-sound="laser">⚡ LASER</button>
+              <button type="button" class="sfx-pill-btn" data-sound="powerup">🍄 1UP BOOST</button>
+              <button type="button" class="sfx-pill-btn" data-sound="fanfare">🎺 WIN FANFARE</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================================================================
+         CONTACT & CONNECT SECTION
+         ================================================================== -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <span class="section-tag">★ CHECKPOINT REACHED : CONNECT ★</span>
+        <h2 class="section-title">Mari Terhubung & <span class="gradient-text">Bekerja Sama</span></h2>
+        <p class="section-desc">
+          Terbuka untuk diskusi proyek website, landing page bisnis, sistem operasional, maupun peluang magang dan kolaborasi teknologi.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Left: Channels Info -->
+        <div class="contact-card">
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">Informasi Kontak Langsung</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+            Silakan hubungi saya melalui saluran komunikasi resmi di bawah ini. Respon tercepat melalui WhatsApp.
+          </p>
+
+          <div class="contact-channels-list">
+            
+            <!-- WhatsApp -->
+            <a href="https://wa.me/62882005363151" target="_blank" rel="noopener noreferrer" class="contact-channel-item" data-sfx="coin">
+              <div class="channel-left">
+                <span class="channel-icon">💬</span>
+                <div class="channel-info">
+                  <span class="channel-title">WhatsApp Chat</span>
+                  <span class="channel-value">+62 882-0053-63151</span>
+                </div>
+              </div>
+              <span class="channel-action-arrow">▶</span>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/faisabdau03-alt" target="_blank" rel="noopener noreferrer" class="contact-channel-item" data-sfx="select">
+              <div class="channel-left">
+                <span class="channel-icon">🐙</span>
+                <div class="channel-info">
+                  <span class="channel-title">GitHub Profile</span>
+                  <span class="channel-value">@faisabdau03-alt</span>
+                </div>
+              </div>
+              <span class="channel-action-arrow">▶</span>
+            </a>
+
+            <!-- Vercel Portfolio -->
+            <a href="https://abdauuuporto.vercel.app" target="_blank" rel="noopener noreferrer" class="contact-channel-item" data-sfx="blip">
+              <div class="channel-left">
+                <span class="channel-icon">🌐</span>
+                <div class="channel-info">
+                  <span class="channel-title">Portfolio Deployment</span>
+                  <span class="channel-value">abdauuuporto.vercel.app</span>
+                </div>
+              </div>
+              <span class="channel-action-arrow">▶</span>
+            </a>
+
+          </div>
+
+          <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.75rem;">
+            <button type="button" class="btn btn-secondary btn-sm" id="copyWaBtn" data-sfx="coin">
+              📋 Salin No. WhatsApp
+            </button>
+            <span style="font-size: 0.78rem; color: var(--text-muted);">Tersedia untuk obrolan santai maupun formal</span>
+          </div>
+        </div>
+
+        <!-- Right: Direct WhatsApp Message Generator -->
+        <div class="contact-card">
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;">Kirim Pesan Cepat via WhatsApp</h3>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem;">
+            Isi nama dan pesan Anda di bawah untuk langsung terhubung ke nomor WhatsApp saya dengan format pesan yang rapi.
+          </p>
+
+          <form class="contact-form-wrap" onsubmit="return false;">
+            <div class="form-group">
+              <label for="senderName" class="form-label">Nama Anda / Instansi</label>
+              <input type="text" id="senderName" class="form-control" placeholder="Contoh: Budi (Klien / Teman Kampus)" required>
+            </div>
+
+            <div class="form-group">
+              <label for="senderMsg" class="form-label">Pesan atau Kebutuhan Proyek</label>
+              <textarea id="senderMsg" class="form-control" placeholder="Tuliskan proyek yang ingin dibuat, pertanyaan, atau ajakan kolaborasi..."></textarea>
+            </div>
+
+            <button type="button" class="btn btn-primary" id="waSendBtn" style="margin-top: 0.5rem;" data-sfx="coin">
+              <span>💬 Kirim Pesan via WhatsApp</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      
+      <div class="footer-top">
+        <a href="#hero" class="hud-brand" data-sfx="blip">
+          <span class="brand-badge">DEV</span>
+          <span class="brand-text">FAISAL<span class="brand-dot">.</span>DEV</span>
+        </a>
+
+        <ul class="footer-links">
+          <li><a href="#hero" class="footer-link">Home</a></li>
+          <li><a href="#about" class="footer-link">About</a></li>
+          <li><a href="#skills" class="footer-link">Skills</a></li>
+          <li><a href="#featured" class="footer-link">Featured</a></li>
+          <li><a href="#projects" class="footer-link">Projects</a></li>
+          <li><a href="#ps-zone" class="footer-link">PS Zone</a></li>
+          <li><a href="#contact" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          © <span id="currentYear">2026</span> Faisal Abdau • Dibuat dengan HTML5, CSS3 Modern, Vanilla JS & Web Audio API.
+        </p>
+
+        <div class="konami-hint-text">
+          <span>💡 PRO TIP: Ketik <code>↑ ↑ ↓ ↓ ← → ← → B A</code> untuk rahasia 16-Bit!</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ====================================================================
+       KONAMI CODE SECRET VICTORY MODAL (Easter Egg)
+       ==================================================================== -->
+  <div id="secretModalOverlay" class="secret-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="secretTitle">
+    <div class="secret-card">
+      <button type="button" class="secret-close-btn" id="secretCloseBtn" aria-label="Tutup Modal">×</button>
+      <div class="secret-trophy-icon">🏆✨</div>
+      <h2 id="secretTitle" class="secret-heading">SECRET UNLOCKED!</h2>
+      <p class="secret-sub">KONAMI CODE MASTER CONFIRMED!</p>
+      <p class="secret-text">
+        Selamat! Kamu berhasil menekan kode legendaris. Kamu dianugerahi gelar <strong>"Ultimate 16-Bit Master Developer"</strong> dan bonus <strong>+999999 Skor</strong>!
+      </p>
+      <button type="button" class="btn btn-primary btn-sm" id="secretOkBtn" data-sfx="coin">
+        <span>TERIMA REWARD (OK)</span>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- ====================================================================
+       SCRIPTS (Separation of Data and Logic)
+       ==================================================================== -->
+  <!-- 1. Curated Project Data Configuration -->
+  <script src="projects-data.js"></script>
+  <!-- 2. Application Logic, Synthesizer & Event Listeners -->
+  <script src="script.js"></script>
+</body>
+</html>
