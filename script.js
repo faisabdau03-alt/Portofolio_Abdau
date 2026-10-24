@@ -310,7 +310,7 @@
       .map(p => {
         const isLive = p.status === "live";
         const statusBadgeClass = isLive ? "live" : "source";
-        const statusBadgeText = isLive ? "🟢 LIVE DEMO" : "💾 SOURCE CODE";
+        const statusBadgeText = isLive ? "● LIVE DEMO" : "○ SOURCE CODE";
 
         const demoBtnHtml = p.demoUrl
           ? `<a href="${p.demoUrl}" target="_blank" rel="noopener noreferrer" class="project-link-btn demo" data-sfx="coin">
@@ -468,8 +468,8 @@
     terminalRunBtn.addEventListener("click", function () {
       sfxPowerUp();
       terminalRunBtn.textContent = "⚡ EXECUTED (200 OK)";
-      terminalRunBtn.style.background = "var(--accent-emerald)";
-      terminalRunBtn.style.color = "#070a12";
+      terminalRunBtn.style.background = "var(--color-accent)";
+      terminalRunBtn.style.color = "#FFFFFF";
 
       setTimeout(() => {
         terminalRunBtn.textContent = "▶ RUN CODE";
@@ -510,11 +510,11 @@
       const combo = this.dataset.combo;
       if (psSkillsQuotes[combo] && comboDisplayText) {
         comboDisplayText.textContent = psSkillsQuotes[combo].text;
-        comboDisplayText.style.color = "var(--accent-cyan-light)";
+        comboDisplayText.style.color = "var(--color-accent)";
         playSfx(psSkillsQuotes[combo].sfx);
 
         setTimeout(() => {
-          comboDisplayText.style.color = "var(--accent-gold)";
+          comboDisplayText.style.color = "var(--color-text-primary)";
         }, 500);
       }
     });

@@ -1,6 +1,6 @@
-# Portofolio Developer — Faisal Abdau (Modern 16-Bit Edition)
+# Portofolio Developer — Faisal Abdau (Creative Tech Edition)
 
-Website portofolio developer modern, responsif, dan interaktif yang memadukan estetika profesional developer dengan sentuhan retro 16-bit khas arcade gaming.
+Website portofolio developer modern, clean, bold, dan profesional dengan palet warna Creative Tech (warm white `#FAFAF8`, deep black `#171717`, dan cobalt blue `#3157D5`).
 
 Website ini dibangun menggunakan stack **HTML5 Semantic, CSS3 Modern, Vanilla JavaScript (ES6+), dan Web Audio API**, dirancang cepat dimuat, mudah dipelihara, dan langsung siap dipublikasikan ke **Vercel** maupun dipasang di **Bio Instagram**.
 
