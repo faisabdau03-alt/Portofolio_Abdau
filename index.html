@@ -18,7 +18,7 @@
   <meta name="theme-color" content="#FAFAF8">
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%233157D5%22/><path d=%22M9 16l4-4m0 8l-4-4m14-4l-4 4m0 0l4 4%22 stroke=%22%23FAFAF8%22 stroke-width=%222.5%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 fill=%22none%22/></svg>">
 
   <!-- Fonts: Google Fonts (Space Grotesk for Bold Geometric Headings + Inter for Clean Body Text) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,7 +60,7 @@
       <div class="hud-actions">
         <!-- Coin Counter & Score Clicker -->
         <div class="hud-stats-pill" id="coinBtn" title="Klik untuk insert coin! (+100 Score)">
-          <span>🪙</span>
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v10M15 10a3 3 0 0 0-3-3H9a3 3 0 0 0 0 6h6a3 3 0 0 1 0 6H9a3 3 0 0 1-3-3"></path></svg>
           <span id="coinCount">x99</span>
           <span style="opacity: 0.4;">|</span>
           <span id="scoreVal">082026</span>
@@ -68,17 +68,17 @@
 
         <!-- SFX Toggle -->
         <button type="button" class="hud-tool-btn" id="sfxToggle" title="Matikan/Hidupkan Efek Suara Web Audio API" aria-label="Toggle Sound FX">
-          <span id="sfxIcon">🔊</span>
+          <span id="sfxIcon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg></span>
         </button>
 
         <!-- CRT Scanline Toggle -->
         <button type="button" class="hud-tool-btn" id="crtToggle" title="Aktifkan/Matikan Filter Retro Scanline CRT" aria-label="Toggle CRT Effect">
-          <span id="crtIcon">📺</span>
+          <span id="crtIcon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg></span>
         </button>
 
         <!-- Mobile Hamburger Button -->
         <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Buka Menu Mobile">
-          ☰
+          <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
         </button>
       </div>
 
@@ -128,13 +128,16 @@
 
           <div class="hero-cta-group">
             <a href="#projects" class="btn btn-primary" data-sfx="coin">
-              <span>▶ Explore My Projects</span>
+              <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              <span>Explore My Projects</span>
             </a>
             <a href="https://github.com/faisabdau03-alt" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-sfx="select">
-              <span>🐙 Visit My GitHub</span>
+              <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>Visit My GitHub</span>
             </a>
             <a href="#contact" class="btn btn-secondary" data-sfx="blip">
-              <span>✉ Hubungi Saya</span>
+              <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              <span>Hubungi Saya</span>
             </a>
           </div>
 
@@ -195,12 +198,13 @@
 
             <div class="widget-footer">
               <div class="widget-footer-info">
-                <span>⚡ UTF-8</span>
+                <span><svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> UTF-8</span>
                 <span>•</span>
                 <span>Node.js / Browser Runtime</span>
               </div>
               <button type="button" class="widget-interactive-btn" id="terminalRunBtn" title="Jalankan kode simulasi">
-                ▶ RUN CODE
+                <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>RUN CODE</span>
               </button>
             </div>
 
@@ -240,10 +244,12 @@
 
           <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
             <a href="#contact" class="btn btn-secondary btn-sm" data-sfx="coin">
-              <span>💬 Ajak Diskusi / Kolaborasi</span>
+              <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              <span>Ajak Diskusi / Kolaborasi</span>
             </a>
             <a href="https://github.com/faisabdau03-alt" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" data-sfx="select">
-              <span>🐙 GitHub Profile</span>
+              <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub Profile</span>
             </a>
           </div>
         </article>
@@ -251,7 +257,9 @@
         <!-- Pillars Card -->
         <div class="about-pillars">
           <div class="pillar-item">
-            <div class="pillar-icon">🎯</div>
+            <div class="pillar-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+            </div>
             <div>
               <h3 class="pillar-title">Problem-Solving Oriented</h3>
               <p class="pillar-desc">
@@ -261,7 +269,9 @@
           </div>
 
           <div class="pillar-item">
-            <div class="pillar-icon">⚡</div>
+            <div class="pillar-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
             <div>
               <h3 class="pillar-title">Modern & Responsive Workflow</h3>
               <p class="pillar-desc">
@@ -271,7 +281,9 @@
           </div>
 
           <div class="pillar-item">
-            <div class="pillar-icon">🎮</div>
+            <div class="pillar-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" x2="10" y1="12" y2="12"></line><line x1="8" x2="8" y1="10" y2="14"></line><line x1="15" x2="15.01" y1="13" y2="13"></line><line x1="18" x2="18.01" y1="11" y2="11"></line><rect width="20" height="12" x="2" y="6" rx="2"></rect></svg>
+            </div>
             <div>
               <h3 class="pillar-title">PlayStation Gamer Mindset</h3>
               <p class="pillar-desc">
@@ -301,7 +313,9 @@
         <!-- Category 1: Languages -->
         <div class="skill-category-card">
           <div class="skill-cat-header">
-            <span class="skill-cat-icon">💻</span>
+            <span class="skill-cat-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </span>
             <h3 class="skill-cat-title">Programming Languages</h3>
           </div>
           <div class="skill-tags-list">
@@ -312,14 +326,16 @@
             <span class="skill-pill">SQL (PostgreSQL)</span>
           </div>
           <div class="skill-proof-note">
-            <span>✔</span> Terverifikasi di 8 repositori publik
+            <svg class="icon-svg icon-svg-sm text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Terverifikasi di 8 repositori publik
           </div>
         </div>
 
         <!-- Category 2: Frontend Development -->
         <div class="skill-category-card">
           <div class="skill-cat-header">
-            <span class="skill-cat-icon">🎨</span>
+            <span class="skill-cat-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><line x1="3" x2="21" y1="9" y2="9"></line><line x1="9" x2="9" y1="21" y2="9"></line></svg>
+            </span>
             <h3 class="skill-cat-title">Frontend Development</h3>
           </div>
           <div class="skill-tags-list">
@@ -331,14 +347,16 @@
             <span class="skill-pill">Responsive Design</span>
           </div>
           <div class="skill-proof-note">
-            <span>✔</span> Terverifikasi di Atur Produksi, Mulyo, & ASM Putra
+            <svg class="icon-svg icon-svg-sm text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Terverifikasi di Atur Produksi, Mulyo, & ASM Putra
           </div>
         </div>
 
         <!-- Category 3: Backend & BaaS -->
         <div class="skill-category-card">
           <div class="skill-cat-header">
-            <span class="skill-cat-icon">☁️</span>
+            <span class="skill-cat-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg>
+            </span>
             <h3 class="skill-cat-title">Backend & Cloud BaaS</h3>
           </div>
           <div class="skill-tags-list">
@@ -349,14 +367,16 @@
             <span class="skill-pill">Node.js & npm</span>
           </div>
           <div class="skill-proof-note">
-            <span>✔</span> Terverifikasi di arsitektur Atur Produksi
+            <svg class="icon-svg icon-svg-sm text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Terverifikasi di arsitektur Atur Produksi
           </div>
         </div>
 
         <!-- Category 4: Database & Storage -->
         <div class="skill-category-card">
           <div class="skill-cat-header">
-            <span class="skill-cat-icon">🗄️</span>
+            <span class="skill-cat-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            </span>
             <h3 class="skill-cat-title">Database & Storage</h3>
           </div>
           <div class="skill-tags-list">
@@ -366,14 +386,16 @@
             <span class="skill-pill">Firebase Auth</span>
           </div>
           <div class="skill-proof-note">
-            <span>✔</span> Terverifikasi di Mulyo-1.0 & BelajarFireB
+            <svg class="icon-svg icon-svg-sm text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Terverifikasi di Mulyo-1.0 & BelajarFireB
           </div>
         </div>
 
         <!-- Category 5: Tools & Deployment -->
         <div class="skill-category-card">
           <div class="skill-cat-header">
-            <span class="skill-cat-icon">🛠️</span>
+            <span class="skill-cat-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" x2="20" y1="19" y2="19"></line></svg>
+            </span>
             <h3 class="skill-cat-title">Tools & Platforms</h3>
           </div>
           <div class="skill-tags-list">
@@ -384,14 +406,16 @@
             <span class="skill-pill">GitHub Pages</span>
           </div>
           <div class="skill-proof-note">
-            <span>✔</span> 6 website aktif dipublikasikan di Vercel
+            <svg class="icon-svg icon-svg-sm text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> 6 website aktif dipublikasikan di Vercel
           </div>
         </div>
 
         <!-- Category 6: Interactive APIs & Audio -->
         <div class="skill-category-card">
           <div class="skill-cat-header">
-            <span class="skill-cat-icon">🔊</span>
+            <span class="skill-cat-icon">
+              <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 10v3"></path><path d="M6 6v11"></path><path d="M10 3v18"></path><path d="M14 8v7"></path><path d="M18 5v13"></path><path d="M22 10v3"></path></svg>
+            </span>
             <h3 class="skill-cat-title">Web APIs & Hardware</h3>
           </div>
           <div class="skill-tags-list">
@@ -402,7 +426,7 @@
             <span class="skill-pill">Eksplorasi IoT / Arduino</span>
           </div>
           <div class="skill-proof-note">
-            <span>✔</span> Sound synthesizer & integrasi deep link
+            <svg class="icon-svg icon-svg-sm text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Sound synthesizer & integrasi deep link
           </div>
         </div>
 
@@ -429,7 +453,7 @@
           <div class="featured-card-body">
             <div class="featured-badges">
               <span class="badge-featured">⭐ FEATURED SYSTEM</span>
-              <span class="badge-status live">🟢 LIVE DEMO READY</span>
+              <span class="badge-status live"><span class="badge-dot"></span> LIVE DEMO READY</span>
               <span class="tech-chip">Vite + Supabase</span>
             </div>
 
@@ -441,7 +465,10 @@
             </p>
 
             <div class="deep-dive-box">
-              <span class="deep-dive-title">💡 MASALAH & SOLUSI YANG DIBUAT:</span>
+              <span class="deep-dive-title">
+                <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
+                MASALAH & SOLUSI YANG DIBUAT:
+              </span>
               <p class="deep-dive-text">
                 Pencatatan manual sering memicu stok bahan baku minus dan ketidakcocokan upah insentif karyawan per unit. Aplikasi ini menyediakan validasi stok otomatis, sinkronisasi realtime multi-perangkat via Supabase, dan ekspor laporan bulanan ke format CSV.
               </p>
@@ -467,10 +494,12 @@
 
             <div class="featured-actions">
               <a href="https://jaya-wijaya.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-cyan btn-sm" data-sfx="coin">
-                <span>▶ Buka Live Demo</span>
+                <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>Buka Live Demo</span>
               </a>
               <a href="https://github.com/faisabdau03-alt/atur-produksi" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" data-sfx="select">
-                <span>🐙 Source Code GitHub</span>
+                <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>Source Code GitHub</span>
               </a>
             </div>
           </div>
@@ -478,7 +507,9 @@
           <div class="featured-card-visual">
             <div class="visual-cartridge">
               <span class="visual-scan-badge">REALTIME 200 OK</span>
-              <div class="visual-big-icon">⚙️</div>
+              <div class="visual-big-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              </div>
               <div class="visual-title-tag">ATUR PRODUKSI</div>
               <div class="visual-repo-name">repo: atur-produksi</div>
               <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: 0.85rem;">
@@ -494,7 +525,7 @@
           <div class="featured-card-body">
             <div class="featured-badges">
               <span class="badge-featured">⭐ FEATURED PLATFORM</span>
-              <span class="badge-status live">🟢 LIVE DEMO READY</span>
+              <span class="badge-status live"><span class="badge-dot"></span> LIVE DEMO READY</span>
               <span class="tech-chip">Bootstrap 5.3 + LocalStorage</span>
             </div>
 
@@ -506,7 +537,10 @@
             </p>
 
             <div class="deep-dive-box">
-              <span class="deep-dive-title">💡 MASALAH & SOLUSI YANG DIBUAT:</span>
+              <span class="deep-dive-title">
+                <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
+                MASALAH & SOLUSI YANG DIBUAT:
+              </span>
               <p class="deep-dive-text">
                 Penyewa sering kebingungan menghitung total sewa untuk variasi jumlah hari dan barang. Sistem ini secara otomatis mengkalkulasi tanggal pengembalian (H+1) dan subtotal sewa secara instan serta menyimpan keranjang pesanan secara persisten di LocalStorage.
               </p>
@@ -531,10 +565,12 @@
 
             <div class="featured-actions">
               <a href="https://mulyoadv.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-cyan btn-sm" data-sfx="coin">
-                <span>▶ Buka Live Demo</span>
+                <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>Buka Live Demo</span>
               </a>
               <a href="https://github.com/faisabdau03-alt/Mulyo-1.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" data-sfx="select">
-                <span>🐙 Source Code GitHub</span>
+                <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>Source Code GitHub</span>
               </a>
             </div>
           </div>
@@ -542,7 +578,9 @@
           <div class="featured-card-visual">
             <div class="visual-cartridge">
               <span class="visual-scan-badge">CATALOG READY</span>
-              <div class="visual-big-icon">🏕️</div>
+              <div class="visual-big-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21h16"></path><path d="m19 21-7-14-7 14"></path><path d="m9 21 3-6 3 6"></path></svg>
+              </div>
               <div class="visual-title-tag">MULYO ADVENTURE</div>
               <div class="visual-repo-name">repo: Mulyo-1.0</div>
               <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: 0.85rem;">
@@ -558,7 +596,7 @@
           <div class="featured-card-body">
             <div class="featured-badges">
               <span class="badge-featured">⭐ FEATURED PORTAL</span>
-              <span class="badge-status live">🟢 LIVE DEMO READY</span>
+              <span class="badge-status live"><span class="badge-dot"></span> LIVE DEMO READY</span>
               <span class="tech-chip">Booking System</span>
             </div>
 
@@ -570,7 +608,10 @@
             </p>
 
             <div class="deep-dive-box">
-              <span class="deep-dive-title">💡 MASALAH & SOLUSI YANG DIBUAT:</span>
+              <span class="deep-dive-title">
+                <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
+                MASALAH & SOLUSI YANG DIBUAT:
+              </span>
               <p class="deep-dive-text">
                 Kebutuhan transparansi informasi armada pariwisata dan estimasi biaya rute perjalanan secara mandiri sebelum menghubungi customer service.
               </p>
@@ -593,10 +634,12 @@
 
             <div class="featured-actions">
               <a href="https://asm-seven-iota.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-cyan btn-sm" data-sfx="coin">
-                <span>▶ Buka Live Demo</span>
+                <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>Buka Live Demo</span>
               </a>
               <a href="https://github.com/faisabdau03-alt/PT-ASM-Putra" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" data-sfx="select">
-                <span>🐙 Source Code GitHub</span>
+                <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>Source Code GitHub</span>
               </a>
             </div>
           </div>
@@ -604,7 +647,9 @@
           <div class="featured-card-visual">
             <div class="visual-cartridge">
               <span class="visual-scan-badge">FLEET SYSTEM</span>
-              <div class="visual-big-icon">🚌</div>
+              <div class="visual-big-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="16" x="4" y="3" rx="2"></rect><path d="M4 11h16"></path><path d="M8 15h.01"></path><path d="M16 15h.01"></path><path d="m6 19-2 2"></path><path d="m18 21-2-2"></path></svg>
+              </div>
               <div class="visual-title-tag">ASM TRANS</div>
               <div class="visual-repo-name">repo: PT-ASM-Putra</div>
               <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: 0.85rem;">
@@ -636,9 +681,13 @@
         <!-- Top Row: Search & Sort -->
         <div class="filter-top-row">
           <div class="search-input-wrap">
-            <span class="search-icon">🔍</span>
+            <span class="search-icon">
+              <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+            </span>
             <input type="text" id="projectSearchInput" placeholder="Cari nama proyek, teknologi, atau deskripsi..." aria-label="Cari Proyek">
-            <button type="button" class="clear-search-btn" id="clearSearchBtn" aria-label="Hapus Pencarian">✕</button>
+            <button type="button" class="clear-search-btn" id="clearSearchBtn" aria-label="Hapus Pencarian">
+              <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+            </button>
           </div>
 
           <div class="sort-select-wrap">
@@ -661,22 +710,22 @@
             <span>Semua Kategori</span>
           </button>
           <button type="button" class="filter-btn" data-category="webapp">
-            <span>⚙️ Web App</span>
+            <span>Web Application</span>
           </button>
           <button type="button" class="filter-btn" data-category="ecommerce">
-            <span>🏕️ E-Commerce / Rental</span>
+            <span>E-Commerce & Rental</span>
           </button>
           <button type="button" class="filter-btn" data-category="booking">
-            <span>🚌 Booking & Profile</span>
+            <span>Booking & Profile</span>
           </button>
           <button type="button" class="filter-btn" data-category="landing">
-            <span>⛰️ Landing Page</span>
+            <span>Landing Page</span>
           </button>
           <button type="button" class="filter-btn" data-category="creative">
-            <span>🎓 Creative UI</span>
+            <span>Creative UI</span>
           </button>
           <button type="button" class="filter-btn" data-category="mobile">
-            <span>📱 Mobile App (Android)</span>
+            <span>Mobile App (Android)</span>
           </button>
         </div>
 
@@ -684,8 +733,8 @@
         <div class="filter-status-row">
           <span>Filter Status:</span>
           <button type="button" class="status-toggle-btn active" data-status="all">Semua Status</button>
-          <button type="button" class="status-toggle-btn" data-status="live">🟢 Live Demo Only</button>
-          <button type="button" class="status-toggle-btn" data-status="source">💾 Source Code Only</button>
+          <button type="button" class="status-toggle-btn" data-status="live"><span class="badge-dot"></span> Live Demo Only</button>
+          <button type="button" class="status-toggle-btn" data-status="source"><svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:0.25rem;"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> Source Code Only</button>
         </div>
 
       </div>
@@ -748,19 +797,25 @@
             <!-- Trophies -->
             <div class="trophy-grid">
               <div class="trophy-card">
-                <div class="t-icon">🏆</div>
+                <div class="t-icon">
+                  <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H8v4h8v-4h-1c-.55 0-1-.45-1-1v-2.34"></path><path d="M18 4H6v7a6 6 0 0 0 12 0V4Z"></path></svg>
+                </div>
                 <div class="t-name">Platinum Focus</div>
                 <div class="t-desc">Konsentrasi tinggi dan presisi saat debugging kode rumit</div>
               </div>
 
               <div class="trophy-card">
-                <div class="t-icon">🥇</div>
+                <div class="t-icon">
+                  <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+                </div>
                 <div class="t-name">Fast Reflexes</div>
                 <div class="t-desc">Cepat beradaptasi dan mempelajari teknologi baru</div>
               </div>
 
               <div class="trophy-card">
-                <div class="t-icon">🎯</div>
+                <div class="t-icon">
+                  <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
                 <div class="t-name">High Replay Value</div>
                 <div class="t-desc">Senang melakukan iterasi dan refactor demi kualitas terbaik</div>
               </div>
@@ -769,10 +824,22 @@
             <!-- Sound Test Board (Web Audio API Synthesizer) -->
             <div class="sound-test-bar">
               <span class="sound-test-label">SYNTH SOUND TEST:</span>
-              <button type="button" class="sfx-pill-btn" data-sound="coin">🪙 COIN</button>
-              <button type="button" class="sfx-pill-btn" data-sound="laser">⚡ LASER</button>
-              <button type="button" class="sfx-pill-btn" data-sound="powerup">🍄 1UP BOOST</button>
-              <button type="button" class="sfx-pill-btn" data-sound="fanfare">🎺 WIN FANFARE</button>
+              <button type="button" class="sfx-pill-btn" data-sound="coin">
+                <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v10M15 10a3 3 0 0 0-3-3H9a3 3 0 0 0 0 6h6a3 3 0 0 1 0 6H9a3 3 0 0 1-3-3"></path></svg>
+                <span>COIN</span>
+              </button>
+              <button type="button" class="sfx-pill-btn" data-sound="laser">
+                <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                <span>LASER</span>
+              </button>
+              <button type="button" class="sfx-pill-btn" data-sound="powerup">
+                <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"></path><path d="m18 9-6-6-6 6"></path></svg>
+                <span>BOOST</span>
+              </button>
+              <button type="button" class="sfx-pill-btn" data-sound="fanfare">
+                <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+                <span>FANFARE</span>
+              </button>
             </div>
           </div>
 
@@ -807,7 +874,9 @@
             <!-- WhatsApp -->
             <a href="https://wa.me/62882005363151" target="_blank" rel="noopener noreferrer" class="contact-channel-item" data-sfx="coin">
               <div class="channel-left">
-                <span class="channel-icon">💬</span>
+                <span class="channel-icon">
+                  <svg class="icon-svg icon-svg-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                </span>
                 <div class="channel-info">
                   <span class="channel-title">WhatsApp Chat</span>
                   <span class="channel-value">+62 882-0053-63151</span>
@@ -819,7 +888,9 @@
             <!-- GitHub -->
             <a href="https://github.com/faisabdau03-alt" target="_blank" rel="noopener noreferrer" class="contact-channel-item" data-sfx="select">
               <div class="channel-left">
-                <span class="channel-icon">🐙</span>
+                <span class="channel-icon">
+                  <svg class="icon-svg icon-svg-lg text-accent" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </span>
                 <div class="channel-info">
                   <span class="channel-title">GitHub Profile</span>
                   <span class="channel-value">@faisabdau03-alt</span>
@@ -831,7 +902,9 @@
             <!-- Vercel Portfolio -->
             <a href="https://abdauuuporto.vercel.app" target="_blank" rel="noopener noreferrer" class="contact-channel-item" data-sfx="blip">
               <div class="channel-left">
-                <span class="channel-icon">🌐</span>
+                <span class="channel-icon">
+                  <svg class="icon-svg icon-svg-lg text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </span>
                 <div class="channel-info">
                   <span class="channel-title">Portfolio Deployment</span>
                   <span class="channel-value">abdauuuporto.vercel.app</span>
@@ -844,7 +917,8 @@
 
           <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.75rem;">
             <button type="button" class="btn btn-secondary btn-sm" id="copyWaBtn" data-sfx="coin">
-              📋 Salin No. WhatsApp
+              <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg>
+              <span>Salin No. WhatsApp</span>
             </button>
             <span style="font-size: 0.78rem; color: var(--color-text-muted);">Tersedia untuk obrolan santai maupun formal</span>
           </div>
@@ -869,7 +943,8 @@
             </div>
 
             <button type="button" class="btn btn-primary" id="waSendBtn" style="margin-top: 0.5rem;" data-sfx="coin">
-              <span>💬 Kirim Pesan via WhatsApp</span>
+              <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" x2="11" y1="2" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              <span>Kirim Pesan via WhatsApp</span>
             </button>
           </form>
         </div>
@@ -909,7 +984,7 @@
         </p>
 
         <div class="konami-hint-text">
-          <span>💡 PRO TIP: Ketik <code>↑ ↑ ↓ ↓ ← → ← → B A</code> untuk rahasia 16-Bit!</span>
+          <span><svg class="icon-svg icon-svg-sm text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="16" y2="12"></line><line x1="12" x2="12.01" y1="8" y2="8"></line></svg> TIP: Ketik <code>↑ ↑ ↓ ↓ ← → ← → B A</code> untuk mode rahasia 16-Bit!</span>
         </div>
       </div>
 
@@ -923,7 +998,9 @@
   <div id="secretModalOverlay" class="secret-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="secretTitle">
     <div class="secret-card">
       <button type="button" class="secret-close-btn" id="secretCloseBtn" aria-label="Tutup Modal">×</button>
-      <div class="secret-trophy-icon">🏆✨</div>
+      <div class="secret-trophy-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" style="width: 56px; height: 56px; color: var(--color-accent);" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.45 1-1 1H8v4h8v-4h-1c-.55 0-1-.45-1-1v-2.34"></path><path d="M18 4H6v7a6 6 0 0 0 12 0V4Z"></path></svg>
+      </div>
       <h2 id="secretTitle" class="secret-heading">SECRET UNLOCKED!</h2>
       <p class="secret-sub">KONAMI CODE MASTER CONFIRMED!</p>
       <p class="secret-text">

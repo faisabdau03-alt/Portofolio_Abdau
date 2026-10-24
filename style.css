@@ -111,6 +111,39 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   outline-offset: 2px;
 }
 
+/* ====================================================================
+   MINIMALIST VECTOR ICON SYSTEM (Anti-AI Slop)
+   ==================================================================== */
+.icon-svg {
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  vertical-align: -0.16em;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.85;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.icon-svg-fill {
+  fill: currentColor;
+  stroke: none;
+}
+
+.icon-svg-lg {
+  width: 1.45em;
+  height: 1.45em;
+  vertical-align: -0.24em;
+}
+
+.icon-svg-sm {
+  width: 0.95em;
+  height: 0.95em;
+  vertical-align: -0.12em;
+}
+
 /* Optional CRT / Technical Grid Texture */
 .crt-overlay {
   display: none;
@@ -779,8 +812,6 @@ body.crt-enabled .crt-overlay {
 }
 
 .pillar-icon {
-  font-size: 1.5rem;
-  line-height: 1;
   background: var(--color-white);
   border: 1px solid var(--color-border);
   width: 44px;
@@ -790,6 +821,7 @@ body.crt-enabled .crt-overlay {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  color: var(--color-accent);
 }
 
 .pillar-title {
@@ -841,7 +873,16 @@ body.crt-enabled .crt-overlay {
 }
 
 .skill-cat-icon {
-  font-size: 1.25rem;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-xs);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  flex-shrink: 0;
 }
 
 .skill-cat-title {
@@ -953,6 +994,16 @@ body.crt-enabled .crt-overlay {
   background: var(--color-success-bg);
   color: var(--color-success);
   border: 1px solid rgba(5, 150, 105, 0.2);
+}
+
+.badge-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-success);
+  margin-right: 0.35rem;
+  vertical-align: middle;
 }
 
 .tech-chip {
@@ -1086,9 +1137,21 @@ body.crt-enabled .crt-overlay {
 }
 
 .visual-big-icon {
-  font-size: 3rem;
-  line-height: 1;
-  margin-bottom: 1rem;
+  width: 68px;
+  height: 68px;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  margin: 0 auto 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+}
+
+.visual-big-icon svg {
+  width: 32px;
+  height: 32px;
 }
 
 .visual-title-tag {
@@ -1306,8 +1369,26 @@ body.crt-enabled .crt-overlay {
 }
 
 .project-card-icon {
-  font-size: 1.75rem;
-  line-height: 1;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  transition: all var(--transition-fast);
+}
+
+.project-card:hover .project-card-icon {
+  border-color: var(--color-accent);
+  background: #FFFFFF;
+}
+
+.project-card-icon svg {
+  width: 22px;
+  height: 22px;
 }
 
 .project-status-tag {
@@ -1616,8 +1697,16 @@ body.crt-enabled .crt-overlay {
 }
 
 .t-icon {
-  font-size: 1.5rem;
-  margin-bottom: 0.35rem;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
 }
 
 .t-name {
@@ -1718,7 +1807,16 @@ body.crt-enabled .crt-overlay {
 }
 
 .channel-icon {
-  font-size: 1.4rem;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  flex-shrink: 0;
 }
 
 .channel-title {

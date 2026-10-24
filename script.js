@@ -155,12 +155,22 @@
   let coins = 99;
   let score = 82026;
 
+  // Icon SVGs (Anti-AI Slop minimal vector icons)
+  const SVG_VOLUME_ON = `<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>`;
+  const SVG_VOLUME_OFF = `<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" x2="1" y1="1" y2="23"></line></svg>`;
+
+  const SVG_CRT_ON = `<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>`;
+  const SVG_CRT_OFF = `<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line><line x1="2" x2="22" y1="2" y2="22"></line></svg>`;
+
+  const SVG_HAMBURGER = `<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>`;
+  const SVG_CLOSE = `<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>`;
+
   // Toggle Sound FX
   if (sfxToggleBtn) {
     sfxToggleBtn.addEventListener("click", function () {
       sfxEnabled = !sfxEnabled;
-      sfxIcon.textContent = sfxEnabled ? "🔊" : "🔇";
-      sfxToggleBtn.title = sfxEnabled ? "Mute Sound Effects" : "Unmute Sound Effects";
+      sfxIcon.innerHTML = sfxEnabled ? SVG_VOLUME_ON : SVG_VOLUME_OFF;
+      sfxToggleBtn.title = sfxEnabled ? "Matikan Efek Suara (Mute)" : "Hidupkan Efek Suara (Unmute)";
       if (sfxEnabled) sfxCoin();
     });
   }
@@ -170,8 +180,8 @@
     crtToggleBtn.addEventListener("click", function () {
       document.body.classList.toggle("crt-enabled");
       const isEnabled = document.body.classList.contains("crt-enabled");
-      crtIcon.textContent = isEnabled ? "📺" : "🖥️";
-      crtToggleBtn.title = isEnabled ? "Disable CRT Scanlines" : "Enable CRT Scanlines";
+      crtIcon.innerHTML = isEnabled ? SVG_CRT_ON : SVG_CRT_OFF;
+      crtToggleBtn.title = isEnabled ? "Nonaktifkan Filter CRT" : "Aktifkan Filter CRT";
       sfxSelect();
     });
   }
@@ -196,7 +206,7 @@
   if (hamburgerBtn && mobileNav) {
     hamburgerBtn.addEventListener("click", function () {
       mobileNav.classList.toggle("open");
-      hamburgerBtn.textContent = mobileNav.classList.contains("open") ? "✕" : "☰";
+      hamburgerBtn.innerHTML = mobileNav.classList.contains("open") ? SVG_CLOSE : SVG_HAMBURGER;
       sfxSelect();
     });
 
@@ -204,7 +214,7 @@
     mobileNav.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", function () {
         mobileNav.classList.remove("open");
-        hamburgerBtn.textContent = "☰";
+        hamburgerBtn.innerHTML = SVG_HAMBURGER;
       });
     });
   }
@@ -283,13 +293,16 @@
     if (filtered.length === 0) {
       projectsGrid.innerHTML = `
         <div class="empty-state">
-          <div class="empty-state-icon">🔍</div>
+          <div class="empty-state-icon">
+            <svg class="icon-svg icon-svg-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+          </div>
           <h4 class="empty-state-title">Tidak ada proyek yang sesuai</h4>
           <p class="empty-state-desc">
             Coba gunakan kata kunci pencarian lain atau reset filter kategori di atas.
           </p>
           <button type="button" class="btn btn-secondary btn-sm" id="resetFilterBtn">
-            ↺ Reset Semua Filter
+            <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+            <span>Reset Filter</span>
           </button>
         </div>
       `;
@@ -320,38 +333,42 @@
 
         // Status badge di pojok kartu
         let statusBadgeClass = "source";
-        let statusBadgeText = "○ PROJECT";
+        let statusBadgeText = "PROJECT";
 
         if (canShowDemo) {
           statusBadgeClass = "live";
-          statusBadgeText = "● LIVE DEMO";
+          statusBadgeText = `<span class="badge-dot"></span>LIVE DEMO`;
         } else if (isPrivate) {
           statusBadgeClass = "source";
-          statusBadgeText = "🔒 PRIVATE REPO";
+          statusBadgeText = `<svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25rem;"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>PRIVATE REPO`;
         } else if (canShowSource) {
           statusBadgeClass = "source";
-          statusBadgeText = "○ SOURCE CODE";
+          statusBadgeText = `<svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25rem;"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>SOURCE CODE`;
         }
 
         // Tombol Demo (kiri)
         const demoBtnHtml = canShowDemo
           ? `<a href="${p.demoUrl}" target="_blank" rel="noopener noreferrer" class="project-link-btn demo" data-sfx="coin">
-              <span>▶ Live Demo</span>
+              <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              <span>Live Demo</span>
              </a>`
           : (p.category === "mobile"
               ? `<span class="project-link-btn disabled" title="Aplikasi Android Native (Dijalankan via Android Studio)">
-                  <span>📱 App Native</span>
+                  <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg>
+                  <span>App Native</span>
                  </span>`
               : "");
 
         // Tombol Source Code (kanan) - AMAN: Tidak merender tautan jika repositori privat
         const repoBtnHtml = canShowSource
           ? `<a href="${p.repoUrl}" target="_blank" rel="noopener noreferrer" class="project-link-btn code" data-sfx="select">
-              <span>🐙 Source Code</span>
+              <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>Source Code</span>
              </a>`
           : (isPrivate
               ? `<span class="project-link-btn private-badge" title="Source code repositori ini bersifat privat (akses terbatas)">
-                  <span>🔒 Private Repo</span>
+                  <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <span>Private Repo</span>
                  </span>`
               : "");
 
@@ -362,7 +379,7 @@
         return `
           <article class="project-card" data-category="${p.category}">
             <div class="project-card-header">
-              <span class="project-card-icon">${p.bannerIcon || "💻"}</span>
+              <span class="project-card-icon">${p.bannerIcon || '<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>'}</span>
               <span class="project-status-tag ${statusBadgeClass}">${statusBadgeText}</span>
             </div>
 
@@ -496,12 +513,12 @@
   if (terminalRunBtn) {
     terminalRunBtn.addEventListener("click", function () {
       sfxPowerUp();
-      terminalRunBtn.textContent = "⚡ EXECUTED (200 OK)";
+      terminalRunBtn.innerHTML = `<svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> EXECUTED (200 OK)`;
       terminalRunBtn.style.background = "var(--color-accent)";
       terminalRunBtn.style.color = "#FFFFFF";
 
       setTimeout(() => {
-        terminalRunBtn.textContent = "▶ RUN CODE";
+        terminalRunBtn.innerHTML = `<svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg> RUN CODE`;
         terminalRunBtn.style.background = "";
         terminalRunBtn.style.color = "";
       }, 2000);
@@ -612,10 +629,10 @@
   if (copyWaBtn) {
     copyWaBtn.addEventListener("click", function () {
       navigator.clipboard.writeText("+62882005363151").then(() => {
-        copyWaBtn.textContent = "✔ Disalin!";
+        copyWaBtn.innerHTML = `<svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Disalin!`;
         sfxCoin();
         setTimeout(() => {
-          copyWaBtn.textContent = "📋 Salin";
+          copyWaBtn.innerHTML = `<svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path></svg> Salin No. WhatsApp`;
         }, 1800);
       });
     });

@@ -34,7 +34,7 @@ const PROJECTS_DATA = [
     showDemo: true,
     repoUrl: "https://github.com/faisabdau03-alt/atur-produksi",
     demoUrl: "https://jaya-wijaya.vercel.app",
-    bannerIcon: "⚙️",
+    bannerIcon: `<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>`,
     accentColor: "#3157D5",
     description:
       "Aplikasi web single-page (SPA) untuk mengelola seluruh rantai operasional manufaktur secara terintegrasi: kontrol stok barang masuk/keluar, pencatatan arus kas keuangan, serta otomasi penggajian karyawan.",
@@ -75,7 +75,7 @@ const PROJECTS_DATA = [
     showDemo: true,
     repoUrl: "https://github.com/faisabdau03-alt/Mulyo-1.0",
     demoUrl: "https://mulyoadv.vercel.app",
-    bannerIcon: "🏕️",
+    bannerIcon: `<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16"></path><path d="m19 21-7-14-7 14"></path><path d="m9 21 3-6 3 6"></path></svg>`,
     accentColor: "#059669",
     description:
       "Platform persewaan perlengkapan camping dan mendaki gunung modern (tenda, carrier, sleeping bag, alat masak). Dilengkapi booking picker interaktif, kalkulator sewa otomatis, dan alur checkout WhatsApp.",
@@ -114,7 +114,7 @@ const PROJECTS_DATA = [
     showDemo: true,
     repoUrl: "https://github.com/faisabdau03-alt/PT-ASM-Putra",
     demoUrl: "https://asm-seven-iota.vercel.app",
-    bannerIcon: "🚌",
+    bannerIcon: `<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="3" rx="2"></rect><path d="M4 11h16"></path><path d="M8 15h.01"></path><path d="M16 15h.01"></path><path d="m6 19-2 2"></path><path d="m18 21-2-2"></path></svg>`,
     accentColor: "#3157D5",
     description:
       "Website resmi pemesanan dan company profile armada bus pariwisata untuk PO Alula Sadida Maryam. Menyajikan estimasi harga rute perjalanan real-time, spesifikasi unit bus, dan konsultasi WhatsApp.",
@@ -151,7 +151,7 @@ const PROJECTS_DATA = [
     showDemo: true,
     repoUrl: "https://github.com/faisabdau03-alt/dasboard-pendakian",
     demoUrl: "https://dasboard-pendakian.vercel.app",
-    bannerIcon: "⛰️",
+    bannerIcon: `<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"></path></svg>`,
     accentColor: "#38bdf8",
     description:
       "Landing page interaktif untuk mempromosikan layanan dan katalog ringkas persewaan perlengkapan petualangan mendaki gunung Mulyo Adventure.",
@@ -181,7 +181,7 @@ const PROJECTS_DATA = [
     showDemo: true,
     repoUrl: "https://github.com/faisabdau03-alt/Arza",
     demoUrl: "https://arza-sage.vercel.app",
-    bannerIcon: "🎓",
+    bannerIcon: `<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg>`,
     accentColor: "#ec4899",
     description:
       "Website kartu ucapan wisuda digital aesthetic dengan tipografi modern, animasi kartu melayang, dan nuansa visual perayaan yang elegan.",
@@ -211,7 +211,7 @@ const PROJECTS_DATA = [
     showDemo: false, // Aplikasi Android native tanpa live web demo
     repoUrl: "https://github.com/faisabdau03-alt/Fokusku",
     demoUrl: null,
-    bannerIcon: "⏱️",
+    bannerIcon: `<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>`,
     accentColor: "#f59e0b",
     description:
       "Prototipe aplikasi mobile Android untuk manajemen fokus belajar dan kerja dengan teknik Pomodoro, dibalut desain visual Material 3 Earth Tone.",
@@ -244,7 +244,7 @@ const PROJECTS_DATA = [
     showDemo: false,
     repoUrl: null, // Dikunci null agar tidak ada URL yang terekspos
     demoUrl: null,
-    bannerIcon: "🔥",
+    bannerIcon: `<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>`,
     accentColor: "#ef4444",
     description:
       "Proyek studi mandiri implementasi integrasi layanan cloud backend Firebase (Authentication & Realtime Database) pada aplikasi Android natif.",
@@ -273,7 +273,7 @@ const PROJECTS_DATA = [
     showDemo: true,
     repoUrl: "https://github.com/faisabdau03-alt/Abdauuu_Porto",
     demoUrl: "https://abdauuuporto.vercel.app",
-    bannerIcon: "👾",
+    bannerIcon: `<svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2"></rect><line x1="6" x2="10" y1="12" y2="12"></line><line x1="8" x2="8" y1="10" y2="14"></line><line x1="15" x2="15.01" y1="13" y2="13"></line><line x1="18" x2="18.01" y1="11" y2="11"></line></svg>`,
     accentColor: "#3157D5",
     description:
       "Versi perdana portofolio personal Faisal Abdau yang mengusung tema arcade 16-bit klasik, efek suara Web Audio API, CRT overlay, dan Konami Code easter egg.",
